@@ -2,12 +2,13 @@
 This project is a big assignment on the UCAS Deep Learning course.We focus on the Identification of RBP(RNA-binding protein) binding sites based on convolutional neural networks.
 
 # Workflow
-
+(https://github.com/JShuffle/UCAS-Deeplearning-Project/blob/master/workflow.png)
 # Setup
-## Prerequisites
+## Pre-requisites
 - python 3.6
 - pytorch 1.1
 - sklearn
+
 The programs support GPUs and CPUs and are able to automatically detect the operating environment. If GPUs are present, it will run with the GPU first.
 
 To ensure that the entire process works properly,verify that the directory structure all files are the same as follow:
@@ -26,8 +27,10 @@ The directory structure of the training code and sample data is as follows:
   |——               ...
 ```
 If you need to train other protein data, you need to put the training data in the data directory.
+
 Other protein data links:
 https://pan.baidu.com/s/1DoNyS4hSPe5RtSpQTDTp9g 
+
 password：ughc
 ## Usage
 `train.py`
@@ -52,8 +55,9 @@ optional arguments:
   -protein PROTEIN  input the protein you have trained,i.e ALKBH5
 ```
 
-##Quick Start
+## Quick Start
 **step1**
+
 run `train.py`
 ```
 >>>python train.py -model_type ensemble -protein ALKBH5 -epoch 5
@@ -69,6 +73,7 @@ globalCNN_ALKBH5.pkl
 localCNN_ALKBH5.pkl
 ```
 **step2**
+
 run`motif_detection.py`
 ```
 >>>python motif_detection.py -protein ALKBH5
@@ -95,5 +100,7 @@ filter9_logo.fa
 filters_meme.txt
 ```
 The output of `filters_meme.txt` can be further compared with the experimentally validated Motif using the `TOMTOM` software (http://meme-suite.org/tools/tomtom).
+
+`filter i _logo.fa` can be used as an input to AME (http://meme-suite.org/tools/ame) to detect the enrichment of Motifs.
 
 # Additional References
