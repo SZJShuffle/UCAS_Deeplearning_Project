@@ -81,7 +81,7 @@ run`motif_detection.py`
 ```
 >>>python motif_detection.py -protein ALKBH5
 ```
-`motif_detection.py ` recognizes potential Motifs and outputs the results in the 'ALKBH5_Motif` directory:
+`motif_detection.py ` recognizes potential Motifs and outputs the results in the 'ALKBH5_Motif` directory are as follow:
 ```
 >>>ls ./ALKBH5_Motif
 filter0_logo.fa
