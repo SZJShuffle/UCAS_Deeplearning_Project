@@ -21,6 +21,7 @@ The directory structure of the training code and sample data is as follows:
 │—— pre_processing.py
 │—— train.py
 │—— README.md
+|—— workflow.png
 |——	data
   |—— ALKBH5_Baltz2012.ls.negatives.fa
   |—— ALKBH5_Baltz2012.ls.positives.fa
