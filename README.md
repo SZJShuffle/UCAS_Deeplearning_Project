@@ -2,7 +2,7 @@
 This project is a big assignment on the UCAS Deep Learning course.We focus on the Identification of RBP(RNA-binding protein) binding sites based on convolutional neural networks.
 
 # Workflow
-(https://github.com/JShuffle/UCAS-Deeplearning-Project/blob/master/workflow.png)
+ ![image](https://github.com/JShuffle/UCAS-Deeplearning-Project/blob/master/workflow.png)
 # Setup
 ## Pre-requisites
 - python 3.6
