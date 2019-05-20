@@ -56,7 +56,7 @@ optional arguments:
 ```
 
 ## Quick Start
-**step1**
+- **step1**
 
 run `train.py`
 ```
@@ -72,7 +72,7 @@ After `train.py` is executed, the `ALKBH5_param` directory will be created, and 
 globalCNN_ALKBH5.pkl
 localCNN_ALKBH5.pkl
 ```
-**step2**
+- **step2**
 
 run`motif_detection.py`
 ```
