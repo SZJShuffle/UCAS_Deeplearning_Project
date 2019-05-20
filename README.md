@@ -1,6 +1,8 @@
 # Introduction
 This project is a big assignment on the UCAS Deep Learning course.We focus on the Identification of RBP(RNA-binding protein) binding sites based on convolutional neural networks.
 
+RNA-binding proteins (RBPs) account for 5~10\% of the eukaryotic proteome, which plays an important role in biological processes such as gene regulation. However, experimental prediction of RBP binding sites remains a time-consuming, costly task. Conversely, learning from existing annotation knowledge and predicting RBP binding sites is a quick method. In this project,we use a deep learning based model,which ensembles 2 convolutional neural networks (CNNs) to identify RBP binding sites. After training the two networks separately, 
+the outputs of the two networks are combined to increase the accuracy of predicting RBP binding sites on the RNA sequence.The results show that the network we trained successfully captured experimentally validated binding motifs.
 # Workflow
  ![image](https://github.com/JShuffle/UCAS-Deeplearning-Project/blob/master/workflow.png)
 # Setup
