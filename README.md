@@ -6,7 +6,7 @@ the outputs of the two networks are combined to increase the accuracy of predict
 # Workflow
  ![image](https://github.com/JShuffle/UCAS-Deeplearning-Project/blob/master/workflow.png)
 # Setup
-## Pre-requisites
+## Prerequisites
 - python 3.6
 - pytorch 1.1
 - sklearn
