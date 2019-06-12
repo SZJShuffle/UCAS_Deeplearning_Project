@@ -107,4 +107,6 @@ The output of `filters_meme.txt` can be further compared with the experimentally
 `filter i _logo.fa` can be used as an input to AME (http://meme-suite.org/tools/ame) to detect the enrichment of Motifs.
 
 # Additional References
-waiting for update...
+Our work is strongly inspired by:
+
+[1]Alipanahi B , Delong A , Weirauch M T , et al. Predicting the sequence specificities of DNA- and RNA-binding proteins by deep learning[J]. Nature Biotechnology, 2015.
