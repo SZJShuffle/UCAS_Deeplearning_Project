@@ -84,10 +84,10 @@ def loadLocalCNN(file):
 def plot_filter_logo(filter_outs,seqs,out_prefix,filter_size = 7, raw_t=0, maxpct_t=0.5):
     '''
     #####################################################
-    #raw_t是最终计算得到的阈值
+    #raw_t:最终计算得到的阈值
     #filter_outs:第一层卷积操作后的输出值
     #filter_size:预设的Motif长度，暂定为7
-    #seqs: 原始序列数据，不需要编码成矩阵
+    #seqs:原始序列数据，不需要编码成矩阵
     ##out_prefix:路径+输出文件前缀 e.g:'D:\\R-exercise/filter1_logo'
     #####################################################
     '''
@@ -339,14 +339,6 @@ if __name__ == '__main__':
     print('----args-----')
     print(args)
     run(args)
-
-
-
-
-
-
-
-
     print('-----done-----')
 
 
