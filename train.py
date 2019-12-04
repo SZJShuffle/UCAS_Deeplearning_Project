@@ -179,7 +179,7 @@ def get_all_data(protein, channel = 7):
     return train_bags, label, test_bags, true_y
 
 
-# training and predict ---------------------------------------------------
+#### training and predict ####
 
 def globalCNN(protein,nb_epoch):
     global test_bags
@@ -229,7 +229,7 @@ def globalCNN(protein,nb_epoch):
     
     return global_trainset_pred,global_testset_pred
     '''
-    ##predict 
+    ## predict 
     print('-------------- global CNN start predicting -----------------')
     test_bags = torch.from_numpy(np.array(test_bags).astype(np.float32))
     global_pred = clf.predict_prob(test_bags)
@@ -356,8 +356,6 @@ def run(args):
 
 
 if __name__ == '__main__':
-    ##QKI/IGF2BP1-3/ELAVL1H
-
     parser = argparse.ArgumentParser()
     parser_args(parser)
     args = parser.parse_args()
