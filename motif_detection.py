@@ -82,15 +82,21 @@ def loadLocalCNN(file):
 
 
 def plot_filter_logo(filter_outs,seqs,out_prefix,filter_size = 7, raw_t=0, maxpct_t=0.5):
-    '''
-    #####################################################
-    #raw_t:最终计算得到的阈值
-    #filter_outs:第一层卷积操作后的输出值
-    #filter_size:预设的Motif长度，暂定为7
-    #seqs:原始序列数据，不需要编码成矩阵
-    ##out_prefix:路径+输出文件前缀 e.g:'D:\\R-exercise/filter1_logo'
-    #####################################################
-    '''
+    """
+    params:
+    ------
+    raw_t:
+        threshold value
+    filter_outs:
+        output value of first layer convolution.
+    filter_size:
+        presetting motif length, default = 7.
+    seqs:
+        raw sequence data.
+    out_prefix:
+        prefix of output file.e.g:'./result/filter1_logo'
+    """
+    
     if maxpct_t:
         all_outs = np.ravel(filter_outs)
         all_outs_mean = all_outs.mean()
@@ -111,25 +117,14 @@ def plot_filter_logo(filter_outs,seqs,out_prefix,filter_size = 7, raw_t=0, maxpc
                     print (kmer ,file = filter_fasta_out )
                     filter_count += 1
     filter_fasta_out.close()
-    #print ('plot logo')
-    # make weblogo
-    '''
-    if filter_count > 0:
-        weblogo_cmd = 'weblogo %s < %s.fa > %s.eps' % (weblogo_opts, out_prefix, out_prefix)
-        subprocess.call(weblogo_cmd, shell=True)
-    '''
+
 
 
 def make_filter_pwm(filter_fasta):
-    ''' Make a PWM for this filter from its top hits '''
-    '''    
-    try:
-        num = test.split('/')[-1][6]
-        pwm = 'filter'+num+'_pwm.txt'
-        pwm_file = open(out_prefix + pwm,'w')
-    except Exception as e:
-        print('cannot open pwm file')
-    '''
+    """
+    Make a PWM for this filter from its top hits 
+    """
+
     nts = {'A':0, 'C':1, 'G':2, 'U':3}
     pwm_counts = []
     nsites = 4 # pseudocounts
@@ -161,12 +156,13 @@ def make_filter_pwm(filter_fasta):
 
 
 def meme_intro(meme_file, seqs):
-    ''' Open MEME motif format file and print intro
-
-    Attrs:
+    ''' 
+    Open MEME motif format file and print intro
+    ------
+    Params:
         meme_file (str) : filename
         seqs [str] : list of strings for obtaining background freqs
-
+    ------
     Returns:
         mem_out : open MEME file
     '''
@@ -200,9 +196,10 @@ def meme_intro(meme_file, seqs):
     return meme_out
 
 def meme_add(meme_out, f, filter_pwm, nsites, trim_filters=False):
-    ''' Print a filter to the growing MEME file
-
-    Attrs:
+    ''' 
+    Print a filter to the growing MEME file
+    ------
+    Params:
         meme_out : open file
         f (int) : filter index #
         filter_pwm (array) : filter PWM array
@@ -235,12 +232,10 @@ def meme_add(meme_out, f, filter_pwm, nsites, trim_filters=False):
 
 
 def info_content(pwm, transpose=False, bg_gc=0.415):
-    ''' Compute PWM information content.
-
-    In the original analysis, I used a bg_gc=0.5. For any
-    future analysis, I ought to switch to the true hg19
-    value of 0.415.
-    '''
+    """
+    Compute PWM information content.
+    
+    """
     pseudoc = 1e-9
 
     if transpose:
@@ -332,7 +327,6 @@ def run(args):
 
 
 if __name__ == '__main__':
-    #QKI/IGF2BP1-3/ELAVL1
     parser = argparse.ArgumentParser()
     parser_args(parser)
     args = parser.parse_args()
@@ -340,9 +334,4 @@ if __name__ == '__main__':
     print(args)
     run(args)
     print('-----done-----')
-
-
-
-
-    
 
